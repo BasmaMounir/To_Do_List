@@ -10,6 +10,9 @@ public class TaskManager {
         this.tasks = new ArrayList<>();
     }
 
+    public void addTask(Task task) {
+        tasks.add(task);
+    }
 
     public List<Task> getCompletedTasks() {
         return tasks.stream().filter(Task::isCompleted).collect(Collectors.toList());
