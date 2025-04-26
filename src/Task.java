@@ -52,7 +52,7 @@ public class Task implements Cloneable{
         isCompleted = completed;
     }
     public Task clone() throws CloneNotSupportedException {
-        super.clone();
+        return (Task) super.clone();
     }
 
     @Override
