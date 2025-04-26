@@ -11,8 +11,9 @@ public class TaskManager {
     public TaskManager() {
         this.tasks = new ArrayList<>();
     }
-    public boolean removeTask(UUID id) {
-        return tasks.removeIf(task -> task.getId().equals(id));
+    public void removeTask(Task task) {
+        tasks.remove(task);
     }
+    
 
 }
