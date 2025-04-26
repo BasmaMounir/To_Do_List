@@ -8,5 +8,11 @@ public class TaskManager {
 
     List<Task> getCompletedTasks() {
        return tasks.stream().filter(Task::isCompleted).collect(Collectors.toList());
+
     }
+
+    void removeTask(Task task) {
+        tasks.remove(task);
+    }
+
 }
