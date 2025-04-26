@@ -17,6 +17,22 @@ public class TaskManager {
         return tasks.stream().filter(Task::isCompleted).collect(Collectors.toList());
     }
 
+    Task updateTask(UUID id,Task task) throws CloneNotSupportedException {
+       for (Task t : tasks) {
+           if(t.getId().equals(id)) {
+               t.setTitle(task.getTitle());
+               t.setDescription(task.getDescription());
+               t.setDate(task.getDate());
+               t.setCompleted(task.isCompleted());
+
+               return t;
+           }
+       }
+
+       Task newTask = task.clone();
+       return newTask;
+
+    }
 
    
    
