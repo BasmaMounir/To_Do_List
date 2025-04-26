@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class TaskManager {
-    private static List<Task> tasks;
+    private List<Task> tasks;
 
     public TaskManager() {
         this.tasks = new ArrayList<>();
