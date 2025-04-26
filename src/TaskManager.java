@@ -18,9 +18,6 @@ public class TaskManager {
     }
 
 
-    public boolean removeTask(UUID id) {
-        return tasks.removeIf(task -> task.getId().equals(id));
-    }
-
+   
    
 }
