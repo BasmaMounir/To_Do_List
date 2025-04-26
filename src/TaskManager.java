@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -11,12 +10,7 @@ public class TaskManager {
         this.tasks = new ArrayList<>();
     }
 
-
     List<Task> getCompletedTasks() {
         return tasks.stream().filter(Task::isCompleted).collect(Collectors.toList());
     }
-
-
-
-
 }
