@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class Task {
+public class Task implements Cloneable{
     private final UUID id;
     private String title;
     private String description;
@@ -50,5 +50,16 @@ public class Task {
 
     public void setCompleted(boolean completed) {
         isCompleted = completed;
+    }
+    public Task clone() throws CloneNotSupportedException {
+        return (Task) super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                " title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
